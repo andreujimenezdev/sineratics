@@ -1,26 +1,403 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #000000;
+    --shadow-premium: 0 4px 12px rgba(0, 0, 0, 0.04);
+    
+    /* Paleta Corporativa Sineratics */
+    --blue-primary: #0A66C2;
+    --blue-dark: #1C4266;
+    --blue-shadow: rgba(10, 102, 194, 0.15);
+    --blue-hover: rgba(10, 102, 194, 0.08);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-black;
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    @apply font-bold text-black;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    @apply font-bold text-black;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  h3, h4, h5, h6 {
+    @apply font-bold text-black;
+    line-height: 1.3;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font-family: inherit;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Sombra premium estándar */
+  .shadow-premium {
+    box-shadow: var(--shadow-premium);
+  }
+
+  /* Separador de sección */
+  .section-divider {
+    position: relative;
+  }
+
+  .section-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1280px;
+    height: 1px;
+    background: #EAEAEA;
+  }
+
+  /* Animación fade-up premium mejorada */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in {
+    animation: fadeUp 0.5s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+  }
+  
+  /* Variantes de fade-in para diferentes elementos */
+  .fade-in-slow {
+    animation: fadeUp 0.8s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+  }
+
+  /* Transiciones premium */
+  .transition-premium {
+    transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Card hover effect premium con acento azul */
+  .card-hover {
+    transition: all 0.35s cubic-bezier(0.4, 0.0, 0.2, 1);
+    border: 1px solid transparent;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--blue-shadow);
+    border-color: var(--blue-primary);
+  }
+
+  /* Tech chip hover con acento azul */
+  .tech-chip {
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    border: 1px solid #e5e5e5;
+  }
+
+  .tech-chip:hover {
+    transform: scale(1.05);
+    background: var(--blue-hover);
+    border-color: var(--blue-primary);
+    color: var(--blue-primary);
+  }
+
+  /* Fondo técnico animado para el HERO - ultra sutil y lento */
+  .sineratics-grid-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.4;
+    animation: sineraticsGridMove 28s ease-in-out infinite alternate;
+    z-index: 0;
+  }
+
+  @keyframes sineraticsGridMove {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translate(-0.25px, -0.25px) scale(1.001);
+      opacity: 0.4;
+    }
+    100% {
+      transform: translate(0.25px, 0.25px) scale(1.0005);
+      opacity: 0.35;
+    }
+  }
+
+  /* Añadir puntos técnicos ultra sutiles */
+  .sineratics-grid-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1.5px, transparent 1.5px);
+    background-size: 40px 40px;
+    animation: sineraticsDotsMove 35s linear infinite alternate;
+    opacity: 0.15;
+  }
+
+  @keyframes sineraticsDotsMove {
+    0% {
+      transform: translate(0,0);
+    }
+    100% {
+      transform: translate(0.5px, -0.5px);
+    }
+  }
+
+  /* Fondo técnico sutil para el footer */
+  .footer-tech-pattern {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+    background-image:
+      linear-gradient(to right, rgba(0,0,0,0.12) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.12) 1px, transparent 1px);
+    background-size: 48px 48px;
+    animation: footerGridFloat 28s ease-in-out infinite alternate;
+  }
+
+  /* Movimiento sutil */
+  @keyframes footerGridFloat {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0.4;
+    }
+    50% {
+      transform: translate(10px, -8px) scale(1.015);
+      opacity: 0.55;
+    }
+    100% {
+      transform: translate(-6px, 6px) scale(1.008);
+      opacity: 0.45;
+    }
+  }
+
+  /* Puntos técnicos suaves en el footer */
+  .footer-tech-pattern::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(0,0,0,0.15) 1.5px, transparent 1.5px);
+    background-size: 48px 48px;
+    opacity: 0.25;
+  }
+
+  /* Microgrid técnico premium para la sección Tecnologías */
+  .tech-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tech-microgrid {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 200px;
+    pointer-events: none;
+    z-index: 0;
+    
+    /* Grid visible */
+    background-image:
+      linear-gradient(to right, rgba(0,0,0,0.10) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.10) 1px, transparent 1px);
+    
+    background-size: 60px 60px;
+    opacity: 0.55;
+  }
+
+  /* Asegurar que el contenido queda sobre el microgrid */
+  .tech-section > *:not(.tech-microgrid) {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Contador animado de números */
+  .counter-number {
+    font-variant-numeric: tabular-nums;
+    transition: all 0.1s ease-out;
+  }
+
+  @keyframes countUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .counter-animate {
+    animation: countUp 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+  }
+
+  /* Acento de color azul técnico */
+  .highlight-blue {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+  }
+
+  /* Subrayado animado */
+  .highlight-blue::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 0%;
+    background-color: #0A66C2;
+    animation: underlineBlue 1.4s ease-out forwards;
+    opacity: 0.85;
+  }
+
+  /* Animación elegante */
+  @keyframes underlineBlue {
+    0% { 
+      width: 0%; 
+      opacity: 0; 
+    }
+    40% { 
+      width: 35%; 
+      opacity: 0.5; 
+    }
+    100% { 
+      width: 100%; 
+      opacity: 1; 
+    }
+  }
+
+  /* === BLUE PULSE LINE: firma visual de Sineratics === */
+  
+  /* Contenedor de la línea azul bajo cada H2 */
+  .section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 14px;
+    cursor: pointer;
+  }
+
+  /* Línea azul animada - Estado inicial */
+  .section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #0A66C2;
+    opacity: 0;
+    transform: translateY(2px);
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Estado visible: línea corta (140px) */
+  .section-title.blue-line-visible::after {
+    width: 140px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hover: expande gradualmente la línea */
+  .section-title.blue-line-visible:hover::after {
+    width: 240px;
+    opacity: 0.9;
+  }
+
+  /* Para títulos muy cortos, limitar el ancho al 100% del contenedor */
+  .section-title.blue-line-visible:hover::after {
+    max-width: 100%;
+  }
+}
+
+@layer utilities {
+  /* Modo oscuro */
+  .dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .dark-mode h1,
+  .dark-mode h2,
+  .dark-mode h3,
+  .dark-mode h4,
+  .dark-mode h5,
+  .dark-mode h6 {
+    color: #ffffff;
+  }
+
+  .dark-mode .bg-white {
+    background-color: #000000 !important;
+  }
+
+  .dark-mode .bg-\[#f5f5f5\] {
+    background-color: #0a0a0a !important;
+  }
+
+  .dark-mode .border-\[#e5e5e5\],
+  .dark-mode .border-\[#EAEAEA\] {
+    border-color: #222222 !important;
+  }
+
+  .dark-mode .text-black {
+    color: #ffffff !important;
+  }
+
+  .dark-mode .text-gray-600 {
+    color: #9ca3af !important;
+  }
+
+  .dark-mode .bg-black {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
 }
