@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: #ffffff;
+:root {
+  --background: #ffffff;
     --foreground: #000000;
     --shadow-premium: 0 4px 12px rgba(0, 0, 0, 0.04);
     
@@ -13,7 +13,7 @@
     --blue-dark: #1C4266;
     --blue-shadow: rgba(10, 102, 194, 0.15);
     --blue-hover: rgba(10, 102, 194, 0.08);
-  }
+}
 
   * {
     @apply border-border;
@@ -149,7 +149,7 @@
     opacity: 0.4;
     animation: sineraticsGridMove 28s ease-in-out infinite alternate;
     z-index: 0;
-  }
+}
 
   @keyframes sineraticsGridMove {
     0% {

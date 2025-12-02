@@ -28,6 +28,9 @@ export default function Header() {
             <Link href="/" className="text-sm font-medium hover:opacity-70 transition-opacity">
               Inicio
             </Link>
+            <Link href="/pymes" className="text-sm font-medium hover:opacity-70 transition-opacity">
+              Soluciones PYMES
+            </Link>
             <Link href="/servicios" className="text-sm font-medium hover:opacity-70 transition-opacity">
               Servicios
             </Link>
@@ -62,6 +65,9 @@ export default function Header() {
           <div className="md:hidden mt-4 pb-4 space-y-4 border-t border-[#e5e5e5] pt-4">
             <Link href="/" className="block text-sm font-medium" onClick={() => setIsMenuOpen(false)}>
               Inicio
+            </Link>
+            <Link href="/pymes" className="block text-sm font-medium" onClick={() => setIsMenuOpen(false)}>
+              Soluciones PYMES
             </Link>
             <Link href="/servicios" className="block text-sm font-medium" onClick={() => setIsMenuOpen(false)}>
               Servicios

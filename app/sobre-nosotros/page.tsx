@@ -7,7 +7,7 @@ import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Sobre Nosotros - Sineratics",
-  description: "Consultoría IT especializada con visión estratégica y excelencia técnica.",
+  description: "Consultoría IT especializada en desarrollo, integraciones y automatización. Soluciones adaptadas a PYMES y empresas medianas.",
 };
 
 export default function SobreNosotrosPage() {
@@ -21,8 +21,8 @@ export default function SobreNosotrosPage() {
           </FadeIn>
           <FadeIn delay={100}>
             <p className="text-xl text-gray-600 max-w-3xl font-light">
-              Consultoría IT que combina experiencia técnica con visión estratégica 
-              para impulsar la transformación digital de tu empresa.
+              Consultoría IT especializada en desarrollo, integraciones y automatización. 
+              Soluciones técnicas adaptadas al tamaño y necesidades de cada negocio.
             </p>
           </FadeIn>
         </div>
@@ -79,8 +79,21 @@ export default function SobreNosotrosPage() {
         </div>
       </section>
 
-      {/* Visión */}
+      {/* Para quién trabajamos */}
       <section className="py-16 px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-xl text-gray-600 leading-relaxed">
+              Trabajamos tanto con <strong className="text-black font-semibold">pequeñas empresas que necesitan soluciones simples y efectivas</strong>, 
+              como con <strong className="text-black font-semibold">compañías que requieren integraciones más avanzadas</strong>. Nos adaptamos al tamaño 
+              y necesidades de cada cliente.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Visión */}
+      <section className="py-16 px-6 lg:px-8 bg-[#f5f5f5]">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl">
             <span className="text-sm font-semibold text-gray-500 mb-2 block">VISIÓN</span>
@@ -88,21 +101,21 @@ export default function SobreNosotrosPage() {
               Ser el socio tecnológico de referencia
             </SectionTitle>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Aspiramos a ser reconocidos como <strong className="text-black font-semibold">el partner tecnológico de confianza</strong> para 
-              empresas que necesitan integrar sistemas complejos, automatizar procesos críticos 
-              y aplicar inteligencia artificial de forma práctica y medible.
+              Queremos ser <strong className="text-black font-semibold">el socio técnico de confianza</strong> para 
+              empresas que necesitan integrar sistemas, automatizar procesos 
+              y aplicar inteligencia artificial de forma práctica.
             </p>
             <p className="text-xl text-gray-600 leading-relaxed mt-4">
-              Queremos ser parte activa de la <strong className="text-black font-semibold">transformación digital industrial</strong>, 
-              conectando el mundo físico con el digital mediante integraciones robustas, 
-              IoT y analítica en tiempo real.
+              Trabajamos con <strong className="text-black font-semibold">tecnología que resuelve problemas reales</strong>, 
+              conectando sistemas, automatizando tareas repetitivas 
+              y facilitando la toma de decisiones con datos.
             </p>
           </div>
         </div>
       </section>
 
       {/* Misión */}
-      <section className="py-16 px-6 lg:px-8 bg-[#f5f5f5]">
+      <section className="py-16 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl">
             <span className="text-sm font-semibold text-gray-500 mb-2 block">MISIÓN</span>
@@ -110,8 +123,8 @@ export default function SobreNosotrosPage() {
               Resolver problemas complejos con tecnología simple
             </SectionTitle>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Nuestra misión es <strong className="text-black font-semibold">simplificar lo complejo</strong>. Tomamos retos técnicos 
-              difíciles y los convertimos en soluciones claras, mantenibles y escalables.
+              Nuestra misión es <strong className="text-black font-semibold">simplificar lo complejo</strong>. Tomamos problemas técnicos 
+              y los convertimos en soluciones claras que funcionan.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -135,7 +148,7 @@ export default function SobreNosotrosPage() {
       </section>
 
       {/* Valores */}
-      <section className="py-16 px-6 lg:px-8">
+      <section className="py-16 px-6 lg:px-8 bg-[#f5f5f5]">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <span className="text-sm font-semibold text-gray-500 mb-2 block">VALORES</span>
@@ -174,6 +187,25 @@ export default function SobreNosotrosPage() {
               hover={false}
             />
           </div>
+        </div>
+      </section>
+
+      {/* Nuestra filosofía de trabajo */}
+      <section className="py-16 px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn>
+            <SectionTitle className="text-4xl md:text-5xl font-bold mb-8" align="center">
+              Nuestra filosofía de trabajo
+            </SectionTitle>
+          </FadeIn>
+          <FadeIn delay={100}>
+            <p className="text-xl text-gray-600 leading-relaxed text-center max-w-4xl mx-auto">
+              En Sineratics creemos en un enfoque transparente, práctico y centrado en resultados. 
+              Trabajamos de forma cercana con cada cliente, entendiendo su negocio y proponiendo 
+              soluciones realistas sin complejidad innecesaria. Da igual el tamaño de la empresa: 
+              lo importante es resolver problemas y mejorar el día a día.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
@@ -218,7 +250,7 @@ export default function SobreNosotrosPage() {
       </section>
 
       {/* Especialización */}
-      <section className="py-16 px-6 lg:px-8">
+      <section className="py-16 px-6 lg:px-8 bg-[#f5f5f5]">
         <div className="max-w-7xl mx-auto">
           <SectionTitle className="text-4xl md:text-5xl font-bold mb-6">
             Nuestra especialización

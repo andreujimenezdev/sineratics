@@ -33,7 +33,7 @@ export default function PortfolioPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-sm font-semibold text-gray-400 mb-2 block">PROYECTO DESTACADO</span>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">KH Lloreda</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">KH Lloreda</h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Plataforma corporativa completa con integraciones múltiples, 
                 automatización de procesos e inteligencia artificial conversacional.
@@ -41,20 +41,20 @@ export default function PortfolioPage() {
               
               <div className="space-y-6 mb-8">
                 <div>
-                  <h3 className="font-semibold mb-2">Alcance</h3>
+                  <h3 className="font-semibold mb-2 text-white">Alcance</h3>
                   <p className="text-sm text-gray-400">
                     Web corporativa responsive, panel de administración, integraciones 
                     con sistemas legacy, chatbot IA, automatizaciones n8n.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">Stack Tecnológico</h3>
+                  <h3 className="font-semibold mb-2 text-white">Stack Tecnológico</h3>
                   <p className="text-sm text-gray-400">
                     Angular 18 + Strapi 5 + MySQL + Docker + n8n + GPT-5
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">Resultados</h3>
+                  <h3 className="font-semibold mb-2 text-white">Resultados</h3>
                   <p className="text-sm text-gray-400">
                     • Reducción del 60% en tiempo de gestión administrativa<br/>
                     • Automatización de 15 procesos críticos<br/>
@@ -73,6 +73,39 @@ export default function PortfolioPage() {
                     {tech}
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Proyecto PYME: Web + WhatsApp */}
+      <section className="py-16 px-6 lg:px-8 bg-[#f5f5f5]">
+        <div className="max-w-7xl mx-auto">
+          <div className="border border-[#e5e5e5] p-10 bg-white">
+            <span className="text-xs font-semibold text-gray-500 mb-2 block">PROYECTO PYME</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Web + WhatsApp para tienda local</h2>
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl">
+              Desarrollo de una web profesional simple con botón de WhatsApp, catálogo básico y automatización de mensajes. 
+              Ideal para comercios que quieren más visibilidad y atención inmediata.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 className="font-semibold mb-3">Resultados</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• Más solicitudes de clientes</li>
+                  <li>• Reducción del tiempo de respuesta</li>
+                  <li>• Mejor imagen del negocio</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-3">Tecnologías</h3>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 border border-[#e5e5e5] text-xs bg-white">Web (HTML/CSS)</span>
+                  <span className="px-3 py-1 border border-[#e5e5e5] text-xs bg-white">WhatsApp Business API</span>
+                  <span className="px-3 py-1 border border-[#e5e5e5] text-xs bg-white">Automatización ligera</span>
+                </div>
               </div>
             </div>
           </div>

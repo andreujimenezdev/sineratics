@@ -2,12 +2,11 @@ import Button from "@/components/Button";
 import Card from "@/components/Card";
 import FadeIn from "@/components/FadeIn";
 import SectionTitle from "@/components/SectionTitle";
-import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
+      {/* 1. HERO PRINCIPAL (PYMES) */}
       <section className="pt-32 pb-24 px-6 lg:px-8 relative overflow-hidden">
         {/* Technical Grid Background */}
         <div className="sineratics-grid-bg"></div>
@@ -15,226 +14,184 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-4xl">
             <FadeIn>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight hero-title">
-                Consultoría IT y<br />Automatización<br /><span className="highlight-blue">Inteligente</span>
-              </h1>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Tecnología útil para tu negocio. <span className="highlight-blue">Simple</span>. Rápida. Que funciona.
+          </h1>
             </FadeIn>
             <FadeIn delay={100}>
               <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl font-light">
-                Desarrollo, integraciones corporativas, n8n e inteligencia artificial aplicada a negocio.
+                Digitalizamos tu empresa con soluciones prácticas que ahorran tiempo, automatizan tareas y atraen más clientes.
               </p>
             </FadeIn>
             <FadeIn delay={200}>
               <Button href="/contacto">
-                Contactar
+                Hablar con un experto
               </Button>
             </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* 2. SOLUCIONES PARA PYMES */}
       <section className="py-24 px-6 lg:px-8 bg-[#f5f5f5] section-divider">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <SectionTitle className="text-4xl md:text-5xl font-bold mb-4">
-              Servicios
+              Soluciones para pequeñas empresas
             </SectionTitle>
             <p className="text-lg text-gray-600 mb-16 max-w-2xl">
-              Soluciones tecnológicas integrales para empresas que buscan innovación y eficiencia.
+              Digitalizamos tu negocio sin complicaciones. Resultados reales desde el primer día.
             </p>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {servicesData.map((service, index) => (
-              <FadeIn key={service.title} delay={index * 50}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {pymeSolutions.map((solution, index) => (
+              <FadeIn key={solution.title} delay={index * 50}>
                 <Card
-                  title={service.title}
-                  description={service.description}
+                  title={solution.title}
+                  description={solution.description}
                 />
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
 
-          <FadeIn delay={300}>
+      {/* 3. PACKS RÁPIDOS Y ASEQUIBLES */}
+      <section className="py-24 px-6 lg:px-8 section-divider">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn>
+            <SectionTitle className="text-4xl md:text-5xl font-bold mb-4" align="center">
+              Packs con precio cerrado
+            </SectionTitle>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+            {packs.map((pack, index) => (
+              <FadeIn key={pack.title} delay={index * 50}>
+                <div className="border border-[#e5e5e5] bg-white p-8 transition-premium card-hover">
+                  <div className="mb-4">
+                    <h3 className="text-xl font-bold mb-2">{pack.title}</h3>
+                    <div className="text-4xl font-bold text-black mb-1">{pack.price}</div>
+                  </div>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {pack.description}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={250}>
             <div className="mt-12 text-center">
-              <Button href="/servicios" variant="secondary">
-                Ver todos los servicios
+              <Button href="/contacto">
+                Consultar disponibilidad
               </Button>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Technologies Section */}
-      <section className="py-24 px-6 lg:px-8 section-divider tech-section">
+      {/* 4. CASOS REALES DE PYMES */}
+      <section className="py-24 px-6 lg:px-8 bg-[#f5f5f5] section-divider">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn>
+            <SectionTitle className="text-4xl md:text-5xl font-bold mb-16">
+              Casos reales que funcionan
+            </SectionTitle>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {casosReales.map((caso, index) => (
+              <FadeIn key={caso.title} delay={index * 50}>
+                <div className="bg-white border border-[#e5e5e5] p-8">
+                  <h3 className="text-xl font-bold mb-3">{caso.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {caso.description}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. POR QUÉ SINERATICS */}
+      <section className="py-24 px-6 lg:px-8 section-divider">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn>
+            <SectionTitle className="text-4xl md:text-5xl font-bold mb-16" align="center">
+              Por qué trabajar con nosotros
+            </SectionTitle>
+          </FadeIn>
+
+          <div className="max-w-3xl mx-auto">
+            <FadeIn delay={100}>
+              <div className="space-y-6">
+                {reasons.map((reason, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="flex-shrink-0 w-2 h-2 bg-black rounded-full mt-2 mr-4"></div>
+                    <p className="text-lg text-gray-600 leading-relaxed">{reason}</p>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. INTEGRACIONES AVANZADAS (EMPRESAS MEDIANAS) */}
+      <section className="py-24 px-6 lg:px-8 bg-[#f5f5f5] section-divider tech-section">
         {/* Technical Microgrid */}
         <div className="tech-microgrid"></div>
         
         <div className="max-w-7xl mx-auto">
           <FadeIn>
-            <SectionTitle className="text-4xl md:text-5xl font-bold mb-4" align="center">
-              Tecnologías
+            <SectionTitle className="text-4xl md:text-5xl font-bold mb-4">
+              Integraciones avanzadas y proyectos técnicos
             </SectionTitle>
-            <p className="text-lg text-gray-600 mb-16 text-center max-w-2xl mx-auto">
-              Stack tecnológico moderno y probado en producción.
+            <p className="text-lg text-gray-600 mb-16 max-w-3xl">
+              También trabajamos con empresas que necesitan soluciones técnicas más completas.
             </p>
           </FadeIn>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {technologies.map((tech, index) => (
-              <FadeIn key={tech} delay={index * 20}>
-                <div className="flex items-center justify-center p-6 border border-[#e5e5e5] bg-white tech-chip">
-                  <span className="text-sm font-medium text-center">{tech}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {advancedCapabilities.map((capability, index) => (
+              <FadeIn key={capability.title} delay={index * 30}>
+                <div className="bg-white border border-[#e5e5e5] p-6">
+                  <h3 className="font-semibold mb-2 text-base">{capability.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {capability.description}
+                  </p>
                 </div>
               </FadeIn>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Case Studies Section */}
-      <section className="py-24 px-6 lg:px-8 bg-[#f5f5f5] section-divider">
-        <div className="max-w-7xl mx-auto">
-          <FadeIn>
-            <SectionTitle className="text-4xl md:text-5xl font-bold mb-4">
-              Casos Reales
-            </SectionTitle>
-            <p className="text-lg text-gray-600 mb-16 max-w-2xl">
-              Proyectos destacados que demuestran nuestra experiencia técnica.
-            </p>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <FadeIn delay={0}>
-              <Card
-                title="KH Lloreda"
-                description="Web corporativa + integraciones complejas + IA conversacional. Stack completo: Angular + Strapi + MySQL + Docker + n8n."
-                className="md:col-span-2"
-              />
-            </FadeIn>
-            <FadeIn delay={100}>
-              <Card
-                title="Integración SAP"
-                description="Conexión vía SOAP para sincronización de datos empresariales en tiempo real. Automatización de procesos de negocio."
-              />
-            </FadeIn>
-            <FadeIn delay={150}>
-              <Card
-                title="Hikvision - Control de Accesos"
-                description="Sistema de fichajes y control de accesos integrado con plataforma corporativa. API REST + WebSockets."
-              />
-            </FadeIn>
-            <FadeIn delay={200}>
-              <Card
-                title="MOVVO - Tracking Industrial"
-                description="Seguimiento de personas y maquinaria en tiempo real. Dashboard de analítica y alertas automatizadas."
-              />
-            </FadeIn>
-            <FadeIn delay={250}>
-              <Card
-                title="Automatización n8n"
-                description="Workflows complejos para sincronización multi-sistema. Agentes inteligentes para procesamiento de datos."
-              />
-            </FadeIn>
-            <FadeIn delay={300}>
-              <Card
-                title="IA en Strapi"
-                description="Integración de GPT-5 en CMS. Búsqueda semántica, generación de contenido y asistente conversacional."
-              />
-            </FadeIn>
-            <FadeIn delay={350}>
-              <Card
-                title="Infraestructura Docker"
-                description="Arquitectura dockerizada completa con Portainer. CI/CD, escalabilidad y alta disponibilidad."
-              />
-            </FadeIn>
-          </div>
-
-          <FadeIn delay={400}>
-            <div className="mt-12 text-center">
-              <Button href="/portfolio" variant="secondary">
-                Ver portfolio completo
+          <FadeIn delay={300}>
+            <div className="mt-12">
+              <Button href="/servicios" variant="secondary">
+                Ver capacidades técnicas completas
               </Button>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Cómo Trabajamos Section */}
-      <section className="py-24 px-6 lg:px-8 section-divider">
-        <div className="max-w-7xl mx-auto">
-          <FadeIn>
-            <SectionTitle className="text-4xl md:text-5xl font-bold mb-4" align="center">
-              Cómo trabajamos
-            </SectionTitle>
-            <p className="text-lg text-gray-600 mb-20 text-center max-w-2xl mx-auto">
-              Metodología clara, eficiente y sin complejidades innecesarias.
-            </p>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <FadeIn delay={0}>
-              <div className="text-center md:text-left">
-                <div className="mb-6">
-                  <span className="text-5xl font-bold text-black opacity-10">01</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Análisis técnico</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Evaluación exhaustiva del caso y arquitectura actual. Identificamos problemas 
-                  reales, no síntomas. Documentamos todo.
-                </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={100}>
-              <div className="text-center md:text-left">
-                <div className="mb-6">
-                  <span className="text-5xl font-bold text-black opacity-10">02</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Diseño de solución</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Propuesta clara, escalable y sin complejidad innecesaria. Stack adecuado al problema. 
-                  Estimaciones realistas de tiempo y coste.
-                </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={200}>
-              <div className="text-center md:text-left">
-                <div className="mb-6">
-                  <span className="text-5xl font-bold text-black opacity-10">03</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Implementación y automatización</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Desarrollo iterativo con entregas parciales. Conexión de sistemas, 
-                  automatización de procesos y puesta en producción controlada.
-                </p>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
+      {/* 7. CTA SIGUIENTE NIVEL */}
       <section className="py-24 px-6 lg:px-8 section-divider">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="border border-[#e5e5e5] p-12 md:p-20 text-center transition-premium hover:shadow-premium">
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                ¿Listo para transformar tu negocio?
+                ¿Quieres llevar tu negocio al siguiente nivel?
               </h2>
               <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-                Solicita una llamada gratuita de valoración tecnológica. Analizamos tu caso y te proponemos soluciones concretas.
+                Cuéntame tu caso y te propongo una solución clara, rápida y sin compromiso.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button href="/contacto">
-                  Solicitar consulta gratuita
-                </Button>
-                <Button href="/sobre-nosotros" variant="secondary">
-                  Conocer más sobre nosotros
-                </Button>
-              </div>
+              <Button href="/contacto">
+                Solicitar consulta rápida
+              </Button>
             </div>
           </FadeIn>
         </div>
@@ -243,50 +200,115 @@ export default function Home() {
   );
 }
 
-const servicesData = [
+// DATOS: Soluciones para PYMES
+const pymeSolutions = [
   {
-    title: "Desarrollo Web",
-    description: "Aplicaciones web fullstack con Angular, React, Vue. Backend con Strapi y Node.js. Soluciones corporativas a medida."
+    title: "Automatización de WhatsApp",
+    description: "Respuestas automáticas · Confirmaciones y recordatorios · Sistema de reservas · Atención 24/7 sin esfuerzo"
   },
   {
-    title: "Integraciones Empresariales",
-    description: "Conectamos tus sistemas: SAP (SOAP), Hikvision, MOVVO, APIs custom. Sincronización de datos en tiempo real."
+    title: "Chatbots Inteligentes",
+    description: "Resuelven dudas frecuentes · Gestionan reservas · Ayudan a tus clientes 24/7 · Personalizados para tu negocio"
   },
   {
-    title: "Automatización n8n",
-    description: "Workflows inteligentes, agentes autónomos y conexiones multi-sistema. Optimiza procesos sin código."
+    title: "Web Profesional en 5–7 días",
+    description: "Rápida, moderna y optimizada · Botón de WhatsApp incluido · Contenido claro y profesional · SEO básico de visibilidad"
   },
   {
-    title: "Inteligencia Artificial",
-    description: "IA conversacional, integración GPT-5/Sonnet/Qwen, buscadores naturales, chatbots corporativos y procesamiento de documentos."
-  },
-  {
-    title: "Arquitectura de Aplicaciones",
-    description: "Diseño escalable, microservicios, dockerización con Portainer. Stack completo: Angular + Strapi + MySQL + Docker."
-  },
-  {
-    title: "Consultoría Tecnológica",
-    description: "Asesoramiento estratégico, auditorías técnicas, modernización de infraestructura y transformación digital."
-  },
+    title: "Gestión de negocio",
+    description: "Calendarios y citas · Control de stock · Gestión sencilla de empleados · Paneles adaptados a tu día a día"
+  }
 ];
 
-const technologies = [
-  "Angular",
-  "React",
-  "Vue",
-  "Next.js",
-  "Node.js",
-  "Strapi",
-  "MySQL",
-  "PostgreSQL",
-  "Docker",
-  "Portainer",
-  "n8n",
-  "GPT-5",
-  "Claude",
-  "TypeScript",
-  "JavaScript",
-  "Python",
-  "SAP",
-  "REST API",
+// DATOS: Packs con precio cerrado
+const packs = [
+  {
+    title: "Web Express",
+    price: "300€",
+    description: "Web profesional lista en 5 días. Diseño moderno, contacto, WhatsApp y SEO básico incluidos."
+  },
+  {
+    title: "WhatsApp Automatizado",
+    price: "150€",
+    description: "Respuestas automáticas, sistema de reservas y mensajes programados sin esfuerzo."
+  },
+  {
+    title: "Chatbot IA",
+    price: "250€",
+    description: "Asistente inteligente que responde preguntas, atiende a clientes 24/7 y gestiona consultas."
+  },
+  {
+    title: "Gestión del Negocio",
+    price: "400€",
+    description: "Citas, stock, empleados o clientes. Todo organizado en un panel sencillo y personalizado."
+  }
+];
+
+// DATOS: Casos reales de PYMES
+const casosReales = [
+  {
+    title: "Peluquería",
+    description: "Reservas automáticas por WhatsApp. Menos llamadas y más tiempo para atender."
+  },
+  {
+    title: "Restaurante",
+    description: "Menú digital y reservas automáticas. Gestión fácil y sin errores."
+  },
+  {
+    title: "Tienda de ropa",
+    description: "Web profesional + chatbot de dudas. Más ventas y atención inmediata."
+  },
+  {
+    title: "Gimnasio",
+    description: "Recordatorios automáticos de renovaciones. Clientes informados y menos incidencias."
+  }
+];
+
+// DATOS: Por qué trabajar con nosotros
+const reasons = [
+  "Trato directo, claro y sin tecnicismos innecesarios.",
+  "Soluciones simples que realmente ayudan en el día a día.",
+  "Resultados rápidos, medibles y asequibles.",
+  "Tecnología profesional hecha fácil.",
+  "Si tu negocio crece, nosotros crecemos contigo."
+];
+
+// DATOS: Integraciones avanzadas (empresas medianas)
+const advancedCapabilities = [
+  {
+    title: "Integración SAP (SOAP)",
+    description: "Conexión bidireccional con sistemas SAP. Sincronización de clientes, pedidos, inventario y facturación en tiempo real."
+  },
+  {
+    title: "Integración Hikvision / control de accesos",
+    description: "Sistemas de fichajes y control de accesos integrados. API REST, WebSockets y gestión de eventos."
+  },
+  {
+    title: "Integración MOVVO / tracking industrial",
+    description: "Seguimiento de personas y maquinaria en tiempo real. Dashboard de analítica y alertas automatizadas."
+  },
+  {
+    title: "APIs multi-sistema",
+    description: "Integraciones REST/SOAP con sistemas legacy y modernos. Middleware personalizado y orquestación de datos."
+  },
+  {
+    title: "Automatización avanzada con n8n",
+    description: "Workflows complejos, agentes autónomos, sincronización multi-sistema y procesamiento de datos masivos."
+  },
+  {
+    title: "IA aplicada a negocio",
+    description: "GPT-5, Claude Sonnet, Qwen. Chatbots corporativos, búsqueda semántica, procesamiento de documentos y asistentes IA."
+  },
+  {
+    title: "Aplicaciones fullstack con Strapi",
+    description: "Backend headless CMS con Strapi. API REST/GraphQL, autenticación, permisos y gestión de contenido avanzada."
+  },
+  {
+    title: "Arquitectura de aplicaciones",
+    description: "Diseño de arquitecturas escalables. Microservicios, APIs robustas, patrones de diseño y documentación técnica."
+  },
+  {
+    title: "Docker, Portainer e infraestructura",
+    description: "Dockerización completa, Portainer, CI/CD, orquestación de contenedores, escalabilidad y alta disponibilidad."
+  }
 ];

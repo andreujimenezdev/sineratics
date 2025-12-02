@@ -34,6 +34,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/pymes" className="text-sm text-gray-600 hover:text-black transition-colors duration-150">
+                  Soluciones PYMES
+                </Link>
+              </li>
+              <li>
                 <Link href="/servicios" className="text-sm text-gray-600 hover:text-black transition-colors duration-150">
                   Servicios
                 </Link>

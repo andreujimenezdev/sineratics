@@ -54,9 +54,27 @@ export default function ContactoPage() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6">Contacto</h1>
           </FadeIn>
           <FadeIn delay={100}>
-            <p className="text-xl text-gray-600 max-w-3xl font-light">
+            <p className="text-xl text-gray-600 max-w-3xl font-light mb-8">
               Cuéntanos tu proyecto. Respondemos en menos de 24 horas.
             </p>
+          </FadeIn>
+          <FadeIn delay={200}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-start">
+              <a 
+                href="https://wa.me/34636059477"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-3 text-sm font-medium transition-all duration-300 cubic-bezier(0.4, 0, 0.2, 1) bg-black text-white hover:bg-blue-primary hover:text-white hover:border-blue-primary border border-black hover:shadow-lg"
+              >
+                Hablar por WhatsApp
+              </a>
+              <a 
+                href="tel:+34636059477"
+                className="inline-block px-8 py-3 text-sm font-medium transition-all duration-300 cubic-bezier(0.4, 0, 0.2, 1) bg-transparent text-black border border-[#e5e5e5] hover:border-blue-primary hover:text-blue-primary hover:bg-blue-primary/5"
+              >
+                Llamar por teléfono
+              </a>
+            </div>
           </FadeIn>
         </div>
       </section>
@@ -249,7 +267,7 @@ export default function ContactoPage() {
               </div>
 
               <div className="mt-8 p-6 bg-black text-white">
-                <h3 className="text-lg font-bold mb-3">¿Prefieres hablar directamente?</h3>
+                <h3 className="text-lg font-bold mb-3 text-white">¿Prefieres hablar directamente?</h3>
                 <p className="text-sm text-gray-300 mb-4">
                   Agenda una videollamada de 30 minutos para hablar de tu proyecto sin compromiso.
                 </p>
