@@ -266,7 +266,7 @@ export default function SobreNosotrosPage() {
                 <div>
                   <h3 className="font-semibold mb-1">Integraciones complejas</h3>
                   <p className="text-sm text-gray-600">
-                    SAP, ERPs legacy, protocolos antiguos (SOAP), APIs con autenticación compleja.
+                    SAP (SOAP, RFC, Fiori), ERPs legacy, APIs corporativas con autenticación compleja.
                   </p>
                 </div>
               </div>
@@ -275,7 +275,7 @@ export default function SobreNosotrosPage() {
                 <div>
                   <h3 className="font-semibold mb-1">IoT industrial</h3>
                   <p className="text-sm text-gray-600">
-                    Hikvision, MOVVO, sensores, maquinaria. Dashboards en tiempo real.
+                    Hikvision, sensores, dispositivos IoT, maquinaria. Dashboards en tiempo real.
                   </p>
                 </div>
               </div>
@@ -284,7 +284,7 @@ export default function SobreNosotrosPage() {
                 <div>
                   <h3 className="font-semibold mb-1">Automatización empresarial</h3>
                   <p className="text-sm text-gray-600">
-                    n8n para workflows complejos. Agentes que toman decisiones autónomas.
+                    Workflows automatizados complejos. Agentes que toman decisiones autónomas.
                   </p>
                 </div>
               </div>

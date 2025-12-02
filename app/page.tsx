@@ -276,24 +276,24 @@ const reasons = [
 // DATOS: Integraciones avanzadas (empresas medianas)
 const advancedCapabilities = [
   {
-    title: "Integración SAP (SOAP)",
-    description: "Conexión bidireccional con sistemas SAP. Sincronización de clientes, pedidos, inventario y facturación en tiempo real."
+    title: "Integraciones SAP (SOAP / RFC / Fiori)",
+    description: "Conectamos aplicaciones con el ecosistema SAP mediante SOAP, RFC o servicios Fiori, garantizando un flujo de datos seguro y estable."
   },
   {
     title: "Integración Hikvision / control de accesos",
     description: "Sistemas de fichajes y control de accesos integrados. API REST, WebSockets y gestión de eventos."
   },
   {
-    title: "Integración MOVVO / tracking industrial",
-    description: "Seguimiento de personas y maquinaria en tiempo real. Dashboard de analítica y alertas automatizadas."
+    title: "Integraciones con sistemas industriales e IoT",
+    description: "Implementación de soluciones conectadas con sensores, cámaras, dispositivos IoT y sistemas industriales para mejorar procesos operativos."
   },
   {
     title: "APIs multi-sistema",
     description: "Integraciones REST/SOAP con sistemas legacy y modernos. Middleware personalizado y orquestación de datos."
   },
   {
-    title: "Automatización avanzada con n8n",
-    description: "Workflows complejos, agentes autónomos, sincronización multi-sistema y procesamiento de datos masivos."
+    title: "Automatización empresarial con workflows inteligentes",
+    description: "Diseño e implementación de workflows y agentes automatizados que conectan sistemas, ejecutan tareas y optimizan procesos empresariales."
   },
   {
     title: "IA aplicada a negocio",

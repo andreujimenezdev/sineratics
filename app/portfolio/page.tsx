@@ -27,30 +27,30 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Proyecto Destacado: KH Lloreda */}
+      {/* Proyecto Destacado: Empresa Industrial */}
       <section className="py-16 px-6 lg:px-8 bg-black text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-sm font-semibold text-gray-400 mb-2 block">PROYECTO DESTACADO</span>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">KH Lloreda</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Integraciones corporativas en empresa industrial</h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Plataforma corporativa completa con integraciones múltiples, 
-                automatización de procesos e inteligencia artificial conversacional.
+                Desarrollo de aplicaciones internas, integraciones complejas con SAP, 
+                sistemas de control industrial, automatización de procesos y herramientas web corporativas.
               </p>
               
               <div className="space-y-6 mb-8">
                 <div>
                   <h3 className="font-semibold mb-2 text-white">Alcance</h3>
                   <p className="text-sm text-gray-400">
-                    Web corporativa responsive, panel de administración, integraciones 
-                    con sistemas legacy, chatbot IA, automatizaciones n8n.
+                    Aplicaciones web corporativas, panel de administración, integraciones con SAP (SOAP/RFC), 
+                    sistemas de control industrial, automatización de workflows empresariales.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2 text-white">Stack Tecnológico</h3>
                   <p className="text-sm text-gray-400">
-                    Angular 18 + Strapi 5 + MySQL + Docker + n8n + GPT-5
+                    Angular + Strapi + Node.js + SAP + IoT + Docker + Automatización
                   </p>
                 </div>
                 <div>
@@ -58,7 +58,7 @@ export default function PortfolioPage() {
                   <p className="text-sm text-gray-400">
                     • Reducción del 60% en tiempo de gestión administrativa<br/>
                     • Automatización de 15 procesos críticos<br/>
-                    • Atención al cliente 24/7 con IA<br/>
+                    • Integración exitosa con sistemas SAP y control industrial<br/>
                     • 100% de disponibilidad desde el lanzamiento
                   </p>
                 </div>
@@ -68,7 +68,7 @@ export default function PortfolioPage() {
             <div className="bg-white text-black p-8 border border-white">
               <h3 className="text-2xl font-bold mb-6">Tecnologías utilizadas</h3>
               <div className="grid grid-cols-3 gap-4">
-                {["Angular", "TypeScript", "Strapi", "Node.js", "MySQL", "Docker", "Portainer", "n8n", "GPT-5", "Nginx", "REST API", "WebSockets"].map((tech) => (
+                {["Angular", "TypeScript", "Node.js", "Strapi", "SAP", "IoT", "Docker", "APIs", "Workflows", "MySQL", "REST API", "WebSockets"].map((tech) => (
                   <div key={tech} className="text-center p-3 border border-[#e5e5e5] text-sm">
                     {tech}
                   </div>
@@ -123,17 +123,17 @@ export default function PortfolioPage() {
             {/* SAP */}
             <div className="border border-[#e5e5e5] p-8 hover:border-black transition-colors">
               <span className="text-xs font-semibold text-gray-500 mb-2 block">INTEGRACIÓN</span>
-              <h3 className="text-2xl font-bold mb-4">SAP (SOAP)</h3>
+              <h3 className="text-2xl font-bold mb-4">Integraciones SAP (SOAP / RFC / Fiori)</h3>
               <p className="text-gray-600 mb-6">
-                Integración bidireccional con SAP ERP para sincronización automática 
-                de clientes, pedidos, facturas e inventario.
+                Conectamos aplicaciones con el ecosistema SAP mediante SOAP, RFC o servicios Fiori, 
+                garantizando un flujo de datos seguro y estable para clientes, pedidos, facturas e inventario.
               </p>
               
               <div className="space-y-4 mb-6">
                 <div>
                   <h4 className="text-sm font-semibold mb-1">Desafío</h4>
                   <p className="text-sm text-gray-600">
-                    Conectar e-commerce moderno con SAP legacy vía protocolo SOAP. 
+                    Conectar aplicaciones modernas con SAP mediante diferentes protocolos (SOAP, RFC, Fiori). 
                     Manejo de autenticación compleja y transformación de datos.
                   </p>
                 </div>
@@ -154,10 +154,10 @@ export default function PortfolioPage() {
               </div>
               
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Node.js</span>
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">SOAP</span>
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Redis</span>
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Bull</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">SAP SOAP</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">RFC</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Fiori</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">APIs corporativas</span>
               </div>
             </div>
 
@@ -202,44 +202,44 @@ export default function PortfolioPage() {
               </div>
             </div>
 
-            {/* MOVVO */}
+            {/* Sistemas Industriales e IoT */}
             <div className="border border-[#e5e5e5] p-8 hover:border-black transition-colors">
               <span className="text-xs font-semibold text-gray-500 mb-2 block">INTEGRACIÓN</span>
-              <h3 className="text-2xl font-bold mb-4">MOVVO - Tracking Industrial</h3>
+              <h3 className="text-2xl font-bold mb-4">Integraciones con sistemas industriales e IoT</h3>
               <p className="text-gray-600 mb-6">
-                Seguimiento en tiempo real de personas y maquinaria en entorno 
-                industrial con alertas inteligentes.
+                Implementación de soluciones conectadas con sensores, cámaras, 
+                dispositivos IoT y sistemas industriales para mejorar procesos operativos.
               </p>
               
               <div className="space-y-4 mb-6">
                 <div>
                   <h4 className="text-sm font-semibold mb-1">Desafío</h4>
                   <p className="text-sm text-gray-600">
-                    Procesar miles de posiciones por minuto. Detectar patrones 
-                    anómalos. Generar alertas contextuales.
+                    Integrar múltiples dispositivos IoT heterogéneos. Procesar datos en 
+                    tiempo real. Garantizar comunicación estable y segura.
                   </p>
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold mb-1">Solución</h4>
                   <p className="text-sm text-gray-600">
-                    Backend con procesamiento de streams. Algoritmos de detección 
-                    de anomalías. Dashboard con mapas en tiempo real.
+                    APIs personalizadas para cada dispositivo. Middleware de integración. 
+                    Dashboard unificado con datos en tiempo real.
                   </p>
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold mb-1">Resultado</h4>
                   <p className="text-sm text-gray-600">
-                    Reducción de incidentes del 30%. Optimización de rutas. 
-                    Analítica histórica para mejora de procesos.
+                    Monitorización centralizada. Reducción de tiempos de respuesta. 
+                    Mejora en eficiencia operativa y control de procesos.
                   </p>
                 </div>
               </div>
               
               <div className="flex flex-wrap gap-2">
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">IoT</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">APIs personalizadas</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Sistemas industriales</span>
                 <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Node.js</span>
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">PostgreSQL</span>
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Maps API</span>
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">React</span>
               </div>
             </div>
 
@@ -264,7 +264,7 @@ export default function PortfolioPage() {
                   <h4 className="text-sm font-semibold mb-1">Solución</h4>
                   <p className="text-sm text-gray-600">
                     API Gateway centralizada. Conectores específicos por sistema. 
-                    Caché inteligente. Sincronización programada con n8n.
+                    Caché inteligente. Sincronización programada con workflows automatizados.
                   </p>
                 </div>
                 <div>
@@ -278,7 +278,7 @@ export default function PortfolioPage() {
               
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Node.js</span>
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">n8n</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Workflows</span>
                 <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Redis</span>
                 <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">GraphQL</span>
               </div>
@@ -287,11 +287,11 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Automatización n8n */}
+      {/* Automatización empresarial */}
       <section className="py-16 px-6 lg:px-8 bg-[#f5f5f5]">
         <div className="max-w-7xl mx-auto">
           <SectionTitle className="text-4xl font-bold mb-12">
-            Automatización con n8n
+            Automatización empresarial con workflows inteligentes
           </SectionTitle>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -398,7 +398,7 @@ export default function PortfolioPage() {
                 <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Claude</span>
                 <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">OCR</span>
                 <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Python</span>
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">n8n</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Automatización</span>
               </div>
             </div>
 

@@ -1,6 +1,6 @@
 # Sineratics - Web Corporativa
 
-Web corporativa oficial de Sineratics, consultora IT especializada en desarrollo web, integraciones empresariales, automatización con n8n e inteligencia artificial aplicada a negocio.
+Web corporativa oficial de Sineratics, consultora IT especializada en desarrollo web, integraciones empresariales, workflows automatizados e inteligencia artificial aplicada a negocio.
 
 ## 🎨 Diseño
 
@@ -88,18 +88,18 @@ sineratics/
 ### 2. Servicios (/servicios)
 Dividido en 5 verticales:
 - A. Desarrollo Web
-- B. Integraciones Empresariales (SAP, Hikvision, MOVVO)
-- C. Automatización n8n
+- B. Integraciones Empresariales (SAP, Hikvision, IoT Industrial)
+- C. Automatización Empresarial con Workflows
 - D. Inteligencia Artificial Aplicada
 - E. Arquitectura de Aplicaciones
 
 ### 3. Portfolio (/portfolio)
 Casos reales de proyectos:
 - KH Lloreda (destacado)
-- Integración SAP
+- Integraciones SAP (SOAP / RFC / Fiori)
 - Hikvision - Control de Accesos
-- MOVVO - Tracking Industrial
-- Automatización n8n
+- Integraciones con sistemas industriales e IoT
+- Automatización empresarial con workflows
 - IA en Strapi
 - Infraestructura Docker
 

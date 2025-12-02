@@ -6,7 +6,7 @@ import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Servicios - Sineratics",
-  description: "Servicios para PYMES (WhatsApp, chatbots, webs) y empresas (integraciones SAP, Hikvision, MOVVO, n8n, IA, Strapi, arquitectura, Docker).",
+  description: "Servicios para PYMES (WhatsApp, chatbots, webs) y empresas (integraciones SAP, Hikvision, IoT industrial, automatización, IA, Strapi, arquitectura, Docker).",
 };
 
 export default function ServiciosPage() {
@@ -176,21 +176,21 @@ export default function ServiciosPage() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <SectionTitle className="text-4xl md:text-5xl font-bold mb-4">
-              Integración SAP (SOAP)
+              Integraciones SAP (SOAP / RFC / Fiori)
             </SectionTitle>
             <p className="text-lg text-gray-600 max-w-3xl">
-              Conexión bidireccional con sistemas SAP mediante protocolo SOAP.
+              Conectamos aplicaciones con el ecosistema SAP mediante SOAP, RFC o servicios Fiori, garantizando un flujo de datos seguro y estable.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card
               title="Sincronización de Datos"
-              description="Clientes, pedidos, inventario, facturación. Sincronización automática en tiempo real."
+              description="Clientes, pedidos, inventario, facturación. Sincronización automática en tiempo real mediante SOAP, RFC o Fiori."
             />
             <Card
               title="Middleware Personalizado"
-              description="Desarrollo de conectores específicos para tu configuración SAP. Transformación de datos."
+              description="Desarrollo de conectores específicos para tu configuración SAP. Transformación de datos y gestión de APIs corporativas."
             />
           </div>
         </div>
@@ -221,55 +221,55 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* 7. Integración MOVVO */}
+      {/* 7. Integraciones con sistemas industriales e IoT */}
       <section className="py-16 px-6 lg:px-8 bg-[#f5f5f5]">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <SectionTitle className="text-4xl md:text-5xl font-bold mb-4">
-              Integración MOVVO / Tracking industrial
+              Integraciones con sistemas industriales e IoT
             </SectionTitle>
             <p className="text-lg text-gray-600 max-w-3xl">
-              Seguimiento de personas y maquinaria en tiempo real. Dashboards y analítica avanzada.
+              Implementación de soluciones conectadas con sensores, cámaras, dispositivos IoT y sistemas industriales para mejorar procesos operativos.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card
-              title="Geolocalización en Tiempo Real"
-              description="Tracking de vehículos, maquinaria o personal. Mapas interactivos con histórico."
+              title="Conectividad IoT"
+              description="Integración con sensores, dispositivos IoT y sistemas industriales. Captura de datos en tiempo real."
             />
             <Card
-              title="Analítica y Alertas"
-              description="Optimización de rutas, alertas de zonas, informes de actividad."
+              title="Monitorización y Control"
+              description="Dashboards en tiempo real, alertas automatizadas y control remoto de dispositivos industriales."
             />
           </div>
         </div>
       </section>
 
-      {/* 8. Automatización avanzada con n8n */}
+      {/* 8. Automatización empresarial */}
       <section className="py-16 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <SectionTitle className="text-4xl md:text-5xl font-bold mb-4">
-              Automatización avanzada con n8n
+              Automatización empresarial con workflows inteligentes
             </SectionTitle>
             <p className="text-lg text-gray-600 max-w-3xl">
-              Workflows complejos, agentes autónomos y sincronización multi-sistema.
+              Diseño e implementación de workflows y agentes automatizados que conectan sistemas, ejecutan tareas y optimizan procesos empresariales.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <Card
               title="Workflows Complejos"
-              description="Automatización visual de procesos: sincronización de datos, notificaciones, procesamiento."
+              description="Automatización visual de procesos: sincronización de datos, notificaciones, procesamiento entre sistemas."
             />
             <Card
               title="Agentes Inteligentes"
-              description="Bots autónomos que ejecutan tareas: análisis de datos, toma de decisiones."
+              description="Bots autónomos que ejecutan tareas: análisis de datos, toma de decisiones, procesamiento de información."
             />
             <Card
               title="Conexiones Multi-Sistema"
-              description="Integra más de 400 aplicaciones: Google Workspace, Slack, CRMs, APIs personalizadas."
+              description="Integración entre múltiples aplicaciones: Google Workspace, Slack, CRMs, ERPs y APIs personalizadas."
             />
           </div>
 
@@ -291,7 +291,7 @@ export default function ServiciosPage() {
                 <li>• Reducción de errores humanos</li>
                 <li>• Escalabilidad sin aumentar plantilla</li>
                 <li>• ROI inmediato y medible</li>
-                <li>• Flexibilidad total con low-code</li>
+                <li>• Flexibilidad y adaptación a procesos</li>
               </ul>
             </div>
           </div>

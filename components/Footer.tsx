@@ -20,7 +20,7 @@ export default function Footer() {
             />
             <p className="text-sm text-gray-600 max-w-md leading-relaxed">
               Consultoría IT especializada en desarrollo web, integraciones empresariales, 
-              automatización con n8n e inteligencia artificial aplicada a negocio.
+              workflows automatizados e inteligencia artificial aplicada a negocio.
             </p>
           </div>
 
