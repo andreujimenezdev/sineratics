@@ -82,7 +82,3 @@ export default function Counter({
     </span>
   );
 }
-
-
-
-

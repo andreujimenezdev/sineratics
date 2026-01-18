@@ -91,11 +91,14 @@ export default function Footer() {
             © {new Date().getFullYear()} Sineratics. Todos los derechos reservados.
           </p>
           <div className="flex space-x-8">
-            <Link href="/privacidad" className="text-xs text-gray-500 hover:text-black transition-colors duration-150">
+            <Link href="/aviso-legal" className="text-xs text-gray-500 hover:text-black transition-colors duration-150">
+              Aviso Legal
+            </Link>
+            <Link href="/politica-privacidad" className="text-xs text-gray-500 hover:text-black transition-colors duration-150">
               Política de Privacidad
             </Link>
-            <Link href="/terminos" className="text-xs text-gray-500 hover:text-black transition-colors duration-150">
-              Términos de Uso
+            <Link href="/politica-cookies" className="text-xs text-gray-500 hover:text-black transition-colors duration-150">
+              Política de Cookies
             </Link>
           </div>
         </div>

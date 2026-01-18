@@ -6,7 +6,7 @@ import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Servicios - Sineratics",
-  description: "Servicios para PYMES (WhatsApp, chatbots, webs) y empresas (integraciones SAP, Hikvision, IoT industrial, automatización, IA, Strapi, arquitectura, Docker).",
+  description: "Servicios para PYMES (WhatsApp, chatbots, webs) y empresas (integraciones ERP, IoT industrial, automatización, IA, Strapi, arquitectura, Docker).",
 };
 
 export default function ServiciosPage() {
@@ -171,51 +171,51 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* 5. Integración SAP */}
+      {/* 5. Integraciones con ERPs */}
       <section className="py-16 px-6 lg:px-8 bg-[#f5f5f5]">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <SectionTitle className="text-4xl md:text-5xl font-bold mb-4">
-              Integraciones SAP (SOAP / RFC / Fiori)
+              Integraciones con ERPs y Sistemas Corporativos
             </SectionTitle>
             <p className="text-lg text-gray-600 max-w-3xl">
-              Conectamos aplicaciones con el ecosistema SAP mediante SOAP, RFC o servicios Fiori, garantizando un flujo de datos seguro y estable.
+              Conectamos tus aplicaciones con sistemas de gestión empresarial (ERPs, CRMs) mediante APIs, servicios web o conectores personalizados.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card
               title="Sincronización de Datos"
-              description="Clientes, pedidos, inventario, facturación. Sincronización automática en tiempo real mediante SOAP, RFC o Fiori."
+              description="Clientes, pedidos, inventario, facturación. Sincronización bidireccional en tiempo real con tu sistema de gestión."
             />
             <Card
-              title="Middleware Personalizado"
-              description="Desarrollo de conectores específicos para tu configuración SAP. Transformación de datos y gestión de APIs corporativas."
+              title="Conectores Personalizados"
+              description="Desarrollo de middleware y conectores a medida para integrar aplicaciones con tu ERP o sistema corporativo."
             />
           </div>
         </div>
       </section>
 
-      {/* 6. Integración Hikvision */}
+      {/* 6. Control de Accesos y Fichaje */}
       <section className="py-16 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <SectionTitle className="text-4xl md:text-5xl font-bold mb-4">
-              Integración Hikvision / Control de accesos
+              Sistemas de Control de Accesos y Fichaje
             </SectionTitle>
             <p className="text-lg text-gray-600 max-w-3xl">
-              Sistemas de fichaje, control de accesos y cámaras IP integrados en tu plataforma.
+              Soluciones de control de presencia, gestión de accesos y fichaje integrados con tus sistemas de gestión y nómina.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card
               title="Control de Accesos"
-              description="Gestión de permisos, eventos en tiempo real, alertas automáticas."
+              description="Gestión de permisos, registro de entradas/salidas, eventos en tiempo real y alertas automáticas."
             />
             <Card
               title="Sistema de Fichaje"
-              description="Integración con nómina, dashboards de asistencia, reportes automáticos."
+              description="Integración con nómina, dashboards de asistencia, reportes automáticos y control de turnos."
             />
           </div>
         </div>
