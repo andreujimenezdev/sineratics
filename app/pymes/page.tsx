@@ -6,7 +6,7 @@ import SectionTitle from "@/components/SectionTitle";
 
 export const metadata: Metadata = {
   title: "Soluciones para PYMES - Sineratics",
-  description: "Automatización, webs rápidas, chatbots y herramientas que facilitan tu día a día. Soluciones digitales para hacer crecer tu negocio.",
+  description: "Soluciones para PYMES sin tecnicismos: web, correo, dominios, formularios y automatizaciones simples para ahorrar tiempo y mejorar la atención.",
 };
 
 export default function PymesPage() {
@@ -17,17 +17,17 @@ export default function PymesPage() {
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Soluciones digitales que hacen crecer tu negocio.
+              Soluciones para PYMES, sin tecnicismos.
             </h1>
           </FadeIn>
           <FadeIn delay={100}>
             <p className="text-xl text-gray-600 max-w-3xl font-light mb-10">
-              Automatización, webs rápidas, chatbots y herramientas que facilitan tu día a día.
+              Nos encargamos de lo técnico para que el negocio funcione mejor: web, correo, dominio, formularios y organización.
             </p>
           </FadeIn>
           <FadeIn delay={200}>
             <Button href="/contacto">
-              Solicitar presupuesto
+              Cuéntanos tu caso
             </Button>
           </FadeIn>
         </div>
@@ -51,13 +51,16 @@ export default function PymesPage() {
         </div>
       </section>
 
-      {/* 3. PACKS CON PRECIO CERRADO */}
+      {/* 3. PACKS */}
       <section className="py-24 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <SectionTitle className="text-4xl md:text-5xl font-bold mb-16" align="center">
-              Packs con precio cerrado
+              Empezar es más fácil con un pack
             </SectionTitle>
+            <p className="text-lg text-gray-600 -mt-10 mb-16 max-w-3xl mx-auto text-center">
+              Packs estándar para resolver lo más común. Si el caso requiere algo especial, lo proponemos por fases.
+            </p>
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -79,7 +82,7 @@ export default function PymesPage() {
           <FadeIn delay={250}>
             <div className="mt-12 text-center">
               <Button href="/contacto">
-                Consultar disponibilidad
+                Ver qué pack encaja
               </Button>
             </div>
           </FadeIn>
@@ -116,10 +119,10 @@ export default function PymesPage() {
           <FadeIn>
             <div className="border border-[#e5e5e5] p-12 md:p-20 text-center transition-premium hover:shadow-premium">
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                ¿Quieres digitalizar tu negocio?
+                ¿Tienes un problema concreto y quieres una solución simple?
               </h2>
               <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-                Te propongo una solución clara, rápida y sin compromiso.
+                Cuéntanos el caso y proponemos el primer paso con impacto.
               </p>
               <Button href="/contacto">
                 Hablar ahora
@@ -135,44 +138,44 @@ export default function PymesPage() {
 // DATOS: Bloques de soluciones
 const soluciones = [
   {
-    title: "Automatización de WhatsApp",
-    description: "Respuestas instantáneas, reservas automáticas y recordatorios sin complicaciones."
+    title: "Presencia online que trae contactos",
+    description: "Web clara, mensaje directo y botones de contacto. Menos ‘visitas’ y más ‘mensajes’."
   },
   {
-    title: "Chatbots Inteligentes",
-    description: "Atención 24/7 para tus clientes. Personalizados para tu negocio."
+    title: "Correo y dominio bien configurados",
+    description: "Revisamos DNS, cuentas y configuración para evitar spam, errores y problemas recurrentes."
   },
   {
-    title: "Web Profesional en 5–7 días",
-    description: "Página moderna, rápida y optimizada, con WhatsApp y SEO básico."
+    title: "Captación y organización",
+    description: "Formularios que funcionan, avisos internos y organización básica para responder más rápido."
   },
   {
-    title: "Gestión del negocio",
-    description: "Citas, stock y empleados. Todo en un panel sencillo y práctico."
+    title: "Automatizaciones útiles (sin humo)",
+    description: "Recordatorios, respuestas tipo y tareas repetitivas conectando herramientas comunes."
   }
 ];
 
-// DATOS: Packs con precio cerrado
+// DATOS: Packs (orientativos)
 const packs = [
   {
     title: "Web Express",
-    price: "300€",
-    description: "Web profesional lista en 5 días. Diseño moderno, contacto, WhatsApp y SEO básico incluidos."
+    price: "Desde 490€",
+    description: "Landing clara orientada a contacto. WhatsApp + llamada + formulario. SEO básico."
   },
   {
-    title: "WhatsApp Automatizado",
-    price: "150€",
-    description: "Respuestas automáticas, sistema de reservas y mensajes programados sin esfuerzo."
+    title: "Correo y dominio",
+    price: "Desde 190€",
+    description: "Revisión y configuración para dejarlo estable (DNS, cuentas, dispositivos, spam)."
   },
   {
-    title: "Chatbot IA",
-    price: "250€",
-    description: "Asistente inteligente que responde preguntas, atiende a clientes 24/7 y gestiona consultas."
+    title: "Captación y formularios",
+    price: "Desde 290€",
+    description: "Formularios fiables, avisos y organización básica de solicitudes."
   },
   {
-    title: "Gestión del Negocio",
-    price: "400€",
-    description: "Citas, stock, empleados o clientes. Todo organizado en un panel sencillo y personalizado."
+    title: "Automatización simple",
+    price: "Desde 390€",
+    description: "Automatizamos tareas repetitivas con un flujo simple y mantenible."
   }
 ];
 
@@ -180,19 +183,19 @@ const packs = [
 const casosReales = [
   {
     title: "Peluquería",
-    description: "Reservas automáticas por WhatsApp. Menos llamadas y más tiempo para atender."
+    description: "Menos llamadas y agenda más ordenada con un flujo claro de contacto y confirmación."
   },
   {
     title: "Restaurante",
-    description: "Menú digital y reservas automáticas. Gestión fácil y sin errores."
+    description: "Reservas y consultas más fáciles para clientes, y menos confusión en el día a día."
   },
   {
     title: "Tienda de ropa",
-    description: "Web profesional + chatbot de dudas. Más ventas y atención inmediata."
+    description: "Web clara + WhatsApp visible. Más solicitudes y mejor imagen del negocio."
   },
   {
     title: "Gimnasio",
-    description: "Recordatorios automáticos de renovaciones. Clientes informados y menos incidencias."
+    description: "Recordatorios y seguimiento simple para reducir incidencias y no depender de la memoria."
   }
 ];
 

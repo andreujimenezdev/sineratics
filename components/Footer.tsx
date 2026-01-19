@@ -73,14 +73,6 @@ export default function Footer() {
                   info@sineratics.com
                 </a>
               </li>
-              <li>
-                <a 
-                  href="tel:+34XXXXXXXXX" 
-                  className="text-sm text-gray-600 hover:text-black transition-colors duration-150"
-                >
-                  +34 XXX XXX XXX
-                </a>
-              </li>
             </ul>
           </div>
         </div>

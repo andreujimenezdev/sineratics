@@ -6,7 +6,7 @@ import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Servicios - Sineratics",
-  description: "Servicios para PYMES (WhatsApp, chatbots, webs) y empresas (integraciones ERP, IoT industrial, automatización, IA, Strapi, arquitectura, Docker).",
+  description: "Servicios para PYMES (web, correo, formularios, automatización simple) y empresas (integraciones ERP, IoT industrial, automatización, IA, Headless CMS, arquitectura, Docker).",
 };
 
 export default function ServiciosPage() {
@@ -349,7 +349,7 @@ export default function ServiciosPage() {
               <div>
                 <h4 className="font-semibold mb-2 text-white">Búsqueda Semántica en Documentación</h4>
                 <p className="text-sm text-gray-300">
-                  Empleados encuentran información 5x más rápido. Integrado en Strapi + MySQL.
+                  Empleados encuentran información 5x más rápido. Integrado en Headless CMS + MySQL.
                 </p>
               </div>
               <div>
@@ -369,15 +369,15 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* 10. Fullstack con Strapi */}
+      {/* 10. Aplicaciones Fullstack con Headless CMS */}
       <section className="py-16 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <SectionTitle className="text-4xl md:text-5xl font-bold mb-4">
-              Aplicaciones Fullstack con Strapi
+              Aplicaciones Fullstack con Headless CMS
             </SectionTitle>
             <p className="text-lg text-gray-600 max-w-3xl">
-              Desarrollo completo de aplicaciones web con backend headless CMS y frontend moderno.
+              Desarrollo completo de aplicaciones web con backend (headless CMS o APIs) y frontend moderno.
             </p>
           </div>
 
@@ -387,8 +387,8 @@ export default function ServiciosPage() {
               description="Frameworks modernos para interfaces reactivas, rápidas y mantenibles. Componentes reutilizables."
             />
             <Card
-              title="Strapi Backend"
-              description="Backend headless CMS. API REST/GraphQL, gestión de contenido, autenticación personalizada."
+              title="Headless CMS / Backend"
+              description="Backend con API REST/GraphQL, gestión de contenido y permisos. Adaptado al negocio."
             />
             <Card
               title="Apps Corporativas"
@@ -399,7 +399,7 @@ export default function ServiciosPage() {
           <div className="border-t border-[#e5e5e5] pt-8">
             <h3 className="text-xl font-semibold mb-4">Stack Tecnológico</h3>
             <div className="flex flex-wrap gap-3">
-              {["Angular", "React", "Vue", "Next.js", "Nuxt", "Strapi", "Node.js", "Express", "NestJS", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "SASS"].map((tech) => (
+              {["Angular", "React", "Vue", "Next.js", "Nuxt", "Headless CMS", "Node.js", "Express", "NestJS", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "SASS"].map((tech) => (
                 <span key={tech} className="px-4 py-2 border border-[#e5e5e5] text-sm bg-white">
                   {tech}
                 </span>

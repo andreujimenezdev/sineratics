@@ -10,11 +10,12 @@ export default function ContactoPage() {
     nombre: "",
     email: "",
     empresa: "",
-    telefono: "",
     mensaje: "",
+    website: "", // honeypot anti-spam
   });
 
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -26,23 +27,37 @@ export default function ContactoPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
+    setErrorMessage("");
 
-    // Aquí iría la lógica de envío real (ej: fetch a API endpoint)
-    // Por ahora simularemos un envío exitoso
-    setTimeout(() => {
-      console.log("Formulario enviado:", formData);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = (await res.json().catch(() => null)) as null | { ok?: boolean; error?: string };
+
+      if (!res.ok || !data?.ok) {
+        setStatus("error");
+        setErrorMessage(data?.error || "Error al enviar el mensaje. Inténtalo de nuevo.");
+        return;
+      }
+
       setStatus("success");
       setFormData({
         nombre: "",
         email: "",
         empresa: "",
-        telefono: "",
         mensaje: "",
+        website: "",
       });
-      
-      // Resetear estado después de 3 segundos
+
       setTimeout(() => setStatus("idle"), 3000);
-    }, 1000);
+    } catch {
+      setStatus("error");
+      setErrorMessage("Error al enviar el mensaje. Revisa tu conexión e inténtalo de nuevo.");
+    }
   };
 
   return (
@@ -61,18 +76,10 @@ export default function ContactoPage() {
           <FadeIn delay={200}>
             <div className="flex flex-col sm:flex-row gap-4 justify-start">
               <a 
-                href="https://wa.me/34636059477"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:info@sineratics.com"
                 className="inline-block px-8 py-3 text-sm font-medium transition-all duration-300 cubic-bezier(0.4, 0, 0.2, 1) bg-black text-white hover:bg-blue-primary hover:text-white hover:border-blue-primary border border-black hover:shadow-lg"
               >
-                Hablar por WhatsApp
-              </a>
-              <a 
-                href="tel:+34636059477"
-                className="inline-block px-8 py-3 text-sm font-medium transition-all duration-300 cubic-bezier(0.4, 0, 0.2, 1) bg-transparent text-black border border-[#e5e5e5] hover:border-blue-primary hover:text-blue-primary hover:bg-blue-primary/5"
-              >
-                Llamar por teléfono
+                Escribir por email
               </a>
             </div>
           </FadeIn>
@@ -90,6 +97,23 @@ export default function ContactoPage() {
               </SectionTitle>
               
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Honeypot anti-spam (no visible) */}
+                <div className="hidden" aria-hidden="true">
+                  <label htmlFor="website" className="block text-sm font-semibold mb-2">
+                    Website
+                  </label>
+                  <input
+                    type="text"
+                    id="website"
+                    name="website"
+                    value={formData.website}
+                    onChange={handleChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    className="w-full px-4 py-3 border border-[#e5e5e5]"
+                  />
+                </div>
+
                 {/* Nombre */}
                 <div>
                   <label htmlFor="nombre" className="block text-sm font-semibold mb-2">
@@ -141,22 +165,6 @@ export default function ContactoPage() {
                   />
                 </div>
 
-                {/* Teléfono */}
-                <div>
-                  <label htmlFor="telefono" className="block text-sm font-semibold mb-2">
-                    Teléfono <span className="font-normal text-gray-500">(opcional)</span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="telefono"
-                    name="telefono"
-                    value={formData.telefono}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-[#e5e5e5] focus:border-black focus:outline-none transition-colors"
-                    placeholder="+34 XXX XXX XXX"
-                  />
-                </div>
-
                 {/* Mensaje */}
                 <div>
                   <label htmlFor="mensaje" className="block text-sm font-semibold mb-2">
@@ -183,7 +191,7 @@ export default function ContactoPage() {
 
                 {status === "error" && (
                   <div className="p-4 bg-red-50 border border-red-200 text-red-800 text-sm">
-                    ✗ Error al enviar el mensaje. Por favor, intenta de nuevo o escríbenos a info@sineratics.com
+                    ✗ {errorMessage || "Error al enviar el mensaje. Por favor, intenta de nuevo o escríbenos a info@sineratics.com"}
                   </div>
                 )}
 
@@ -213,13 +221,6 @@ export default function ContactoPage() {
                     <h4 className="text-sm font-semibold mb-2">Email</h4>
                     <a href="mailto:info@sineratics.com" className="text-lg hover:opacity-70 transition-opacity">
                       info@sineratics.com
-                    </a>
-                  </div>
-
-                  <div>
-                    <h4 className="text-sm font-semibold mb-2">Teléfono</h4>
-                    <a href="tel:+34XXXXXXXXX" className="text-lg hover:opacity-70 transition-opacity">
-                      +34 XXX XXX XXX
                     </a>
                   </div>
 
@@ -264,19 +265,6 @@ export default function ContactoPage() {
                     </div>
                   </li>
                 </ul>
-              </div>
-
-              <div className="mt-8 p-6 bg-black text-white">
-                <h3 className="text-lg font-bold mb-3 text-white">¿Prefieres hablar directamente?</h3>
-                <p className="text-sm text-gray-300 mb-4">
-                  Agenda una videollamada de 30 minutos para hablar de tu proyecto sin compromiso.
-                </p>
-                <a 
-                  href="#" 
-                  className="inline-block bg-white text-black px-6 py-2 text-sm font-medium hover:opacity-80 transition-opacity"
-                >
-                  Agendar llamada →
-                </a>
               </div>
             </div>
           </div>
@@ -344,7 +332,7 @@ export default function ContactoPage() {
             ¿No te gusta rellenar formularios?
           </SectionTitle>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Lo entendemos. Escríbenos directamente por email o LinkedIn.
+            Lo entendemos. Escríbenos directamente por email.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -353,12 +341,6 @@ export default function ContactoPage() {
               className="bg-black text-white px-8 py-3 text-sm font-medium hover:opacity-80 transition-opacity"
             >
               info@sineratics.com
-            </a>
-            <a 
-              href="#" 
-              className="bg-white text-black border border-black px-8 py-3 text-sm font-medium hover:bg-black hover:text-white transition-colors"
-            >
-              LinkedIn →
             </a>
           </div>
         </div>

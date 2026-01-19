@@ -51,6 +51,16 @@ npm start
 
 El sitio estará disponible en [http://localhost:3000](http://localhost:3000)
 
+## ✉️ Formulario de contacto (envío por email)
+
+El formulario de `Contacto` envía los datos a `POST /api/contact` y desde ahí se manda un email usando Resend.
+
+Variables de entorno necesarias:
+
+- `RESEND_API_KEY`: API key de Resend
+- `CONTACT_TO_EMAIL`: (opcional) destino, por defecto `info@sineratics.com`
+- `CONTACT_FROM_EMAIL`: (opcional) remitente, por defecto `Sineratics <onboarding@resend.dev>`
+
 ## 📁 Estructura del Proyecto
 
 ```
@@ -88,7 +98,7 @@ sineratics/
 ### 2. Servicios (/servicios)
 Dividido en 5 verticales:
 - A. Desarrollo Web
-- B. Integraciones Empresariales (SAP, Hikvision, IoT Industrial)
+- B. Integraciones Empresariales (software a medida, control de accesos, IoT Industrial)
 - C. Automatización Empresarial con Workflows
 - D. Inteligencia Artificial Aplicada
 - E. Arquitectura de Aplicaciones
@@ -96,11 +106,11 @@ Dividido en 5 verticales:
 ### 3. Portfolio (/portfolio)
 Casos reales de proyectos:
 - KH Lloreda (destacado)
-- Integraciones SAP (SOAP / RFC / Fiori)
-- Hikvision - Control de Accesos
+- Desarrollo de software a medida e integraciones
+- Control de accesos y fichaje
 - Integraciones con sistemas industriales e IoT
 - Automatización empresarial con workflows
-- IA en Strapi
+- IA en Headless CMS
 - Infraestructura Docker
 
 ### 4. Sobre Nosotros (/sobre-nosotros)
@@ -112,7 +122,7 @@ Casos reales de proyectos:
 - Especialización
 
 ### 5. Contacto (/contacto)
-- Formulario de contacto (nombre, email, empresa, teléfono, mensaje)
+- Formulario de contacto (nombre, email, empresa, mensaje)
 - Información de contacto
 - FAQ
 - Alternativas de contacto directo

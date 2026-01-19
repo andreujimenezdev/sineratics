@@ -35,7 +35,7 @@ export default function PortfolioPage() {
               <span className="text-sm font-semibold text-gray-400 mb-2 block">PROYECTO DESTACADO</span>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Integraciones corporativas en empresa industrial</h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Desarrollo de aplicaciones internas, integraciones complejas con SAP, 
+                Desarrollo de aplicaciones internas, integraciones con sistemas corporativos (ERP/CRM),
                 sistemas de control industrial, automatización de procesos y herramientas web corporativas.
               </p>
               
@@ -43,14 +43,14 @@ export default function PortfolioPage() {
                 <div>
                   <h3 className="font-semibold mb-2 text-white">Alcance</h3>
                   <p className="text-sm text-gray-400">
-                    Aplicaciones web corporativas, panel de administración, integraciones con SAP (SOAP/RFC), 
+                    Aplicaciones web corporativas, panel de administración, integraciones con ERP/CRM,
                     sistemas de control industrial, automatización de workflows empresariales.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2 text-white">Stack Tecnológico</h3>
                   <p className="text-sm text-gray-400">
-                    Angular + Strapi + Node.js + SAP + IoT + Docker + Automatización
+                    Angular + Headless CMS + Node.js + Integraciones + IoT + Docker + Automatización
                   </p>
                 </div>
                 <div>
@@ -58,7 +58,7 @@ export default function PortfolioPage() {
                   <p className="text-sm text-gray-400">
                     • Reducción del 60% en tiempo de gestión administrativa<br/>
                     • Automatización de 15 procesos críticos<br/>
-                    • Integración exitosa con sistemas SAP y control industrial<br/>
+                    • Integración exitosa con sistemas corporativos y control industrial<br/>
                     • 100% de disponibilidad desde el lanzamiento
                   </p>
                 </div>
@@ -68,7 +68,7 @@ export default function PortfolioPage() {
             <div className="bg-white text-black p-8 border border-white">
               <h3 className="text-2xl font-bold mb-6">Tecnologías utilizadas</h3>
               <div className="grid grid-cols-3 gap-4">
-                {["Angular", "TypeScript", "Node.js", "Strapi", "SAP", "IoT", "Docker", "APIs", "Workflows", "MySQL", "REST API", "WebSockets"].map((tech) => (
+                {["Angular", "TypeScript", "Node.js", "Headless CMS", "Integraciones", "IoT", "Docker", "APIs", "Workflows", "MySQL", "REST API", "WebSockets"].map((tech) => (
                   <div key={tech} className="text-center p-3 border border-[#e5e5e5] text-sm">
                     {tech}
                   </div>
@@ -120,51 +120,51 @@ export default function PortfolioPage() {
           </SectionTitle>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* SAP */}
+            {/* Desarrollo de software a medida */}
             <div className="border border-[#e5e5e5] p-8 hover:border-black transition-colors">
               <span className="text-xs font-semibold text-gray-500 mb-2 block">INTEGRACIÓN</span>
-              <h3 className="text-2xl font-bold mb-4">Integraciones SAP (SOAP / RFC / Fiori)</h3>
+              <h3 className="text-2xl font-bold mb-4">Desarrollo de software a medida</h3>
               <p className="text-gray-600 mb-6">
-                Conectamos aplicaciones con el ecosistema SAP mediante SOAP, RFC o servicios Fiori, 
-                garantizando un flujo de datos seguro y estable para clientes, pedidos, facturas e inventario.
+                Diseñamos y desarrollamos software adaptado a vuestro negocio: aplicaciones internas, paneles,
+                integraciones con sistemas corporativos y automatización de procesos.
               </p>
               
               <div className="space-y-4 mb-6">
                 <div>
                   <h4 className="text-sm font-semibold mb-1">Desafío</h4>
                   <p className="text-sm text-gray-600">
-                    Conectar aplicaciones modernas con SAP mediante diferentes protocolos (SOAP, RFC, Fiori). 
-                    Manejo de autenticación compleja y transformación de datos.
+                    Unificar procesos y datos en diferentes herramientas, evitando tareas manuales y errores.
+                    Necesidad de un flujo de trabajo estable y mantenible.
                   </p>
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold mb-1">Solución</h4>
                   <p className="text-sm text-gray-600">
-                    Middleware en Node.js con manejo de colas (Bull/Redis). 
-                    Sincronización cada 5 minutos con reintentos automáticos.
+                    Desarrollo de una aplicación y APIs a medida en Node.js, con sincronización programada,
+                    reintentos automáticos y trazabilidad.
                   </p>
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold mb-1">Resultado</h4>
                   <p className="text-sm text-gray-600">
-                    99.9% de éxito en sincronización. Reducción de errores manuales 
-                    del 95%. Dashboards de monitorización en tiempo real.
+                    Menos trabajo manual, datos más coherentes y visibilidad del estado del proceso.
+                    Base sólida para escalar funcionalidades con el tiempo.
                   </p>
                 </div>
               </div>
               
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">SAP SOAP</span>
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">RFC</span>
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Fiori</span>
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">APIs corporativas</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Software a medida</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">APIs</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Node.js</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Automatización</span>
               </div>
             </div>
 
-            {/* Hikvision */}
+            {/* Control de accesos */}
             <div className="border border-[#e5e5e5] p-8 hover:border-black transition-colors">
               <span className="text-xs font-semibold text-gray-500 mb-2 block">INTEGRACIÓN</span>
-              <h3 className="text-2xl font-bold mb-4">Hikvision - Control de Accesos</h3>
+              <h3 className="text-2xl font-bold mb-4">Control de accesos y fichaje</h3>
               <p className="text-gray-600 mb-6">
                 Sistema completo de fichajes y control de accesos integrado 
                 con plataforma de gestión de RRHH.
@@ -174,7 +174,7 @@ export default function PortfolioPage() {
                 <div>
                   <h4 className="text-sm font-semibold mb-1">Desafío</h4>
                   <p className="text-sm text-gray-600">
-                    Capturar eventos de dispositivos Hikvision en tiempo real y 
+                    Capturar eventos de dispositivos de control de accesos en tiempo real y 
                     sincronizar con sistema de nómina. Gestión de 50+ dispositivos.
                   </p>
                 </div>
@@ -362,7 +362,7 @@ export default function PortfolioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="border border-[#e5e5e5] p-8">
               <span className="text-xs font-semibold text-gray-500 mb-2 block">IA</span>
-              <h3 className="text-2xl font-bold mb-4">Chatbot GPT-5 en Strapi</h3>
+              <h3 className="text-2xl font-bold mb-4">Chatbot con Headless CMS</h3>
               <p className="text-gray-600 mb-4">
                 Asistente conversacional integrado en CMS corporativo. Consulta de 
                 documentación, procedimientos internos y FAQ.
@@ -375,7 +375,7 @@ export default function PortfolioPage() {
               </ul>
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">GPT-5</span>
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Strapi</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Headless CMS</span>
                 <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">RAG</span>
                 <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Vector DB</span>
               </div>
@@ -419,7 +419,7 @@ export default function PortfolioPage() {
                 <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">OpenAI</span>
                 <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">MySQL</span>
                 <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Embeddings</span>
-                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Strapi</span>
+                <span className="text-xs px-3 py-1 border border-[#e5e5e5] bg-[#f5f5f5]">Headless CMS</span>
               </div>
             </div>
 

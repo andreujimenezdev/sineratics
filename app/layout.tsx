@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Sineratics - Consultoría IT y Automatización Inteligente",
   description: "Desarrollo, integraciones corporativas, workflows automatizados e inteligencia artificial aplicada a negocio.",
-  keywords: ["consultoría IT", "desarrollo web", "automatización", "workflows", "inteligencia artificial", "SAP", "Angular", "Strapi"],
+  keywords: ["consultoría IT", "desarrollo web", "automatización", "workflows", "inteligencia artificial", "software a medida", "Angular", "Headless CMS", "Node.js"],
 };
 
 export default function RootLayout({

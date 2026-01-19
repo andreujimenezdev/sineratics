@@ -266,7 +266,7 @@ export default function SobreNosotrosPage() {
                 <div>
                   <h3 className="font-semibold mb-1">Integraciones complejas</h3>
                   <p className="text-sm text-gray-600">
-                    SAP (SOAP, RFC, Fiori), ERPs legacy, APIs corporativas con autenticación compleja.
+                    ERPs legacy, APIs corporativas con autenticación compleja y conectores a medida.
                   </p>
                 </div>
               </div>
@@ -275,7 +275,7 @@ export default function SobreNosotrosPage() {
                 <div>
                   <h3 className="font-semibold mb-1">IoT industrial</h3>
                   <p className="text-sm text-gray-600">
-                    Hikvision, sensores, dispositivos IoT, maquinaria. Dashboards en tiempo real.
+                    Sensores, dispositivos IoT, maquinaria. Dashboards en tiempo real.
                   </p>
                 </div>
               </div>
@@ -313,7 +313,7 @@ export default function SobreNosotrosPage() {
                 <div>
                   <h3 className="font-semibold mb-1">Fullstack moderno</h3>
                   <p className="text-sm text-gray-600">
-                    Angular, React, Strapi, MySQL. Stack probado en producción.
+                    Angular, React, Headless CMS, MySQL. Stack probado en producción.
                   </p>
                 </div>
               </div>
