@@ -56,7 +56,7 @@ async function sendEmailWithResend(payload: ContactPayload) {
 
   // Destino por defecto (si no se configura CONTACT_TO_EMAIL)
   const to = process.env.CONTACT_TO_EMAIL || "info@sineratics.com";
-  const from = process.env.CONTACT_FROM_EMAIL || "Sineratics <onboarding@resend.dev>";
+  const from = process.env.CONTACT_FROM_EMAIL || "Sineratics <web@sineratics.com>";
 
   const subject = `Nuevo contacto: ${payload.nombre} (${payload.empresa})`;
   const text = [
