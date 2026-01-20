@@ -15,21 +15,13 @@ export default function Home() {
           <div className="max-w-4xl">
             <FadeIn>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                Te quitamos los problemas de informática del negocio.
+                Tecnología útil para tu negocio. <span className="highlight-blue">Simple</span>. Rápida. Que funciona.
           </h1>
             </FadeIn>
             <FadeIn delay={100}>
               <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl font-light">
-                Si algo digital te frena (web, correo, dominio, formularios, herramientas), lo analizamos contigo y lo dejamos funcionando, sin tecnicismos.
+                Digitalizamos tu empresa con soluciones prácticas que ahorran tiempo, automatizan tareas y atraen más clientes.
               </p>
-            </FadeIn>
-            <FadeIn delay={150}>
-              <ul className="text-sm md:text-base text-gray-600 mb-10 space-y-2 max-w-2xl">
-                <li>• Arreglos rápidos y mejoras que se notan</li>
-                <li>• Web clara para que te contacten (WhatsApp, llamada, formulario)</li>
-                <li>• Correo y dominio bien configurados (sin sustos)</li>
-                <li>• Automatizaciones simples para ahorrar tiempo</li>
-              </ul>
             </FadeIn>
             <FadeIn delay={200}>
               <Button href="/contacto">
